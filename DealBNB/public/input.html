@@ -1,0 +1,15 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+<h1>Evaluate</h1>
+<form action="predict" method="POST">
+    {% csrf_token %}
+
+    Enter Property Link: <input type="text" name="link"><br><br>
+    Enter Property City: <input type="text" name="city"><br><br>
+    Enter Property State Abbreviation: <input type="text" name="state"><br><br>
+    <input type="submit">
+</form>
+
+{% endblock %}
