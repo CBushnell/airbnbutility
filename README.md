@@ -9,12 +9,13 @@ These include but are not limited to django, pandas, pickle, and os
 
 
 Then run the command 'python manage.py runserver'
-The link to the local host for the site will appear and you should navigate to that
-If any errors pop up immediatly it is likely due to dependency installations but should be easy to troubleshoot
+
+The link to the local host for the site will appear and you should navigate to that.
+If any errors pop up immediatly it is likely due to dependency installations but should be easy to troubleshoot.
 
 
-We offer a few example links for properties to consider in your exploration of our demo, but feel free to try your own
-We chose these because we know they were in the dataset at the time of scraping
+We offer a few example links for properties to consider in your exploration of our demo, but feel free to try your own.
+We chose these because we know they were in the dataset at the time of scraping.
 
 https://www.airbnb.com/rooms/33940942?adults=1&children=0&infants=0&pets=0&check_in=2023-03-12&check_out=2023-03-17&source_impression_id=p3_1670363398_WJFs859ix2V36E87
 
