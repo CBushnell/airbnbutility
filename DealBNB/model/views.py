@@ -33,8 +33,11 @@ def predict(request):
     data_filename = os.path.join(dir,property_state,property_city,property_city+'-NO-NA-with-locations.csv')
     dataset = pd.read_csv(data_filename)
     prop_id = property_url.split('/')[-1]
+    prop_id = prop_id.split('?')[0]
+    
     prop_ = dataset[dataset['id'] == int(prop_id)]
-
+    if (len(prop_) == 0):
+        return render(request, "error.html", {'error_message': f"Property not found in the dataset, please try again with another property."})
 
     actual_price = prop_['price'][0]
 
