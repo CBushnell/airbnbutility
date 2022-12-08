@@ -36,10 +36,10 @@ def predict(request):
     prop_id = prop_id.split('?')[0]
     
     prop_ = dataset[dataset['id'] == int(prop_id)]
-    if (len(prop_) == 0):
-        return render(request, "error.html", {'error_message': f"Property not found in the dataset, please try again with another property."})
+    if (prop_.empty):
+        return render(request, "error.html", {'error_message': "Unfortunatly this proprty was not in the data scraped for this project."})
 
-    actual_price = prop_['price'][0]
+    actual_price = int(prop_['price'])
 
     prop_ = prop_.drop(['neighbourhood', 'neighbourhood_cleansed', 'id','price'], axis="columns").astype('float32')
 
@@ -55,4 +55,4 @@ def get_price_status(predicted_price,actual_price):
     elif predicted_price > actual_price + 25:
         return 'Underpriced'
     else:
-        return 'Good Price'
+        return 'Fair Price'
