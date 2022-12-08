@@ -37,7 +37,7 @@ def predict(request):
     
     prop_ = dataset[dataset['id'] == int(prop_id)]
     if (prop_.empty):
-        return render(request, "error.html", {'error_message': "Unfortunatly this proprty was not in the data scraped for this project."})
+        return render(request, "error.html", {'error_message': "Unfortunately this property was not in the data scraped for this project."})
 
     actual_price = int(prop_['price'])
 
