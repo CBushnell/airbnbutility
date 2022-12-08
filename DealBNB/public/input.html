@@ -3,7 +3,7 @@
 {% block content %}
 
 <h1>Evaluate</h1>
-<form action="predict" method="POST">
+<form class="main" action="predict" method="POST">
     {% csrf_token %}
 
     Enter Property Link: <input type="text" name="link"><br><br>

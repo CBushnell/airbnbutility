@@ -4,10 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DealBnB</title>
+    <style>
+        .div1 {
+            background-color: antiquewhite;
+            width: 100%;
+            border: 3px solid gray;
+        }
+        .div2 {
+            margin: 50px auto 0;
+            width: 75%;
+            padding: 10px;
+        }
+        header {
+            margin: auto;
+            width: 50%;
+            text-align: center;
+            font-size: 75px;
+            color: rgb(170, 16, 16);
+        }
+        h1 {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+        }
+        form {
+            margin: auto;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
-<body bgcolor="#ffad33">
+<div class="div1">
+    <header>DealBnB</header>
+</div>
+
+<div class="div2">
     {% block content %}
 
     {% endblock %}
-</body>
+</div>
 </html>
